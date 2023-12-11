@@ -14,7 +14,7 @@ import { asyncWithLDProvider, LDContext } from 'launchdarkly-react-client-sdk';
   };
 
   const LDProvider = await asyncWithLDProvider({
-    clientSideID: process.env.REACT_APP_LD_CLIENT_SIDE_ID ?? '',
+    clientSideID: process.env.REACT_APP_LD_CLIENT_SIDE_ID ?? '656f100f085f800fbf7d6444',
     context,
   });
 

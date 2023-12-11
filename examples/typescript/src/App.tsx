@@ -1,19 +1,22 @@
 import React from 'react';
 import logo from './logo.svg';
+import ldLogo from './ld-logo1.png';
 import './App.css';
 import { useFlags } from 'launchdarkly-react-client-sdk';
 
 function App() {
-  const { devTestFlag } = useFlags();
-
+  const { devTestFlag, bottomTextFlag, testFlag } = useFlags();
+  
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>{devTestFlag ? <b>Flag on</b> : <b>Flag off</b>}</p>
-        <a className="App-link" href="https://reactjs.org" target="_blank" rel="noopener noreferrer">
-          Learn React
-        </a>
+      <h1>
+        {testFlag}
+      </h1>
+      {devTestFlag ? <img src={ldLogo} className="App-logo" alt="ld logo" /> : <img src={logo} className="App-logo" alt="logo" />}
+      <p>
+        {bottomTextFlag}
+      </p>
       </header>
     </div>
   );
