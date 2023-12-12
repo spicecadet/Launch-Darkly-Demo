@@ -4,7 +4,7 @@ For this demo I used an example in the Launch Darkly React SDK TypeScript exampl
 **Run the following commands to get started**
 ```sh 
 git clone https://github.com/spicecadet/Launch-Darkly-Demo.git
-cd /examples/typescript
+cd react-client-sdk/examples/typescript
 ```
 - Create a file called .env.local
 - Add REACT_APP_LD_CLIENT_SIDE_ID=xxx
@@ -17,6 +17,7 @@ yarn && yarn start
 You will need three feature flags to show the capabilities of this demo. Create the following Kill Switch flags in your Launch Darkly project
 
 ### dev-test-flag - Boolean Flag
+This flag changes the react logo to a Launch Darkly logo
 - Create a Kill Switch Flag and name it dev-test-flag
 - Hit next and make sure Boolean is selected in the Flag variations options
 - For the first variation use the following values: Name: Enabled, Value: True
@@ -30,6 +31,7 @@ Under Advanced Configuration  make sure SDKs using Client-side ID is clicked
 - Click Create flag
 
 ### bottom-text-flag - String Flag
+This Flag updates the text on the botton of the page
 - Create a Kill Switch Flag and name it bottom-text-flag
 - Hit next and make sure String is selected in the Flag variations options
 - For the first variation use the following values: Value: Introduction to Feature Flags , Name: Old
@@ -42,7 +44,8 @@ Under Default Variations
 Under Advanced Configuration  make sure SDKs using Client-side ID is clicked
 - Click Create flag
 
-test-flag - Multivariate Flag
+### test-flag - Multivariate Flag
+This flag creates an experiment flag on the top of the page
 - Create an Experiment Flag and name it test-flag
 - Hit next and make sure String is selected in the Flag variations options
 - For the first variation use the following: Value: Welcome!
