@@ -14,7 +14,7 @@ yarn && yarn start
 ```
 
 ## Add Feature Flags to Launch Darkly
-You will need three feature flags to show the capabilities of this demo. Create the following Kill Switch flags in your Launch Darkly project
+You will need three feature flags to show the capabilities of this demo. Create the following flags in your Launch Darkly project
 
 ### dev-test-flag - Boolean Flag
 This flag changes the react logo to a Launch Darkly logo
