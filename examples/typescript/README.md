@@ -4,7 +4,7 @@ For this demo I used an example in the Launch Darkly React SDK TypeScript exampl
 **Run the following commands to get started**
 ```sh 
 git clone https://github.com/spicecadet/Launch-Darkly-Demo.git
-cd react-client-sdk/examples/typescript
+cd Launch-Darkly-Demo/examples/typescript
 ```
 - Create a file called .env.local
 - Add REACT_APP_LD_CLIENT_SIDE_ID=xxx
