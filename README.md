@@ -1,3 +1,58 @@
+# Demo Installation
+For this demo I used an example in the Launch Darkly React SDK as a starting point. The following steps will get the demo app up and running.
+
+- git clone https://github.com/spicecadet/Launch-Darkly-Demo.git
+- cd /examples/typescript
+- Add your Launch Darkly ClientSideID to examples/typescript/hoc/src/universal/app.js on line 20
+- yarn start
+
+## Add Feature Flags to Launch Darkly
+You will need three feature flags to show the capabilities of this demo. Create the following Kill Switch flags in your Launch Darkly project
+
+## dev-test-flag - Boolean Flag
+- Create a Kill Switch Flag and name it dev-test-flag
+- Hit next and make sure Boolean is selected in the Flag variations options
+- For the first variation use the following values: Name: Enabled, Value: True
+- For the second variation use the following values: Name: Disabled, Value: False
+
+Under Default Variations
+- Set On to Enabled
+- Set Off to Disabled
+
+Under Advanced Configuration  make sure SDKs using Client-side ID is clicked
+- Click Create flag
+
+## bottom-text-flag - String Flag
+- Create a Kill Switch Flag and name it bottom-text-flag
+- Hit next and make sure String is selected in the Flag variations options
+- For the first variation use the following values: Value: Introduction to Feature Flags , Name: Old
+- For the second variation use the following values: Value: Feature Flags FTW 😁!, Name: New
+
+Under Default Variations
+- Set On to New
+- Set Off to Old
+
+Under Advanced Configuration  make sure SDKs using Client-side ID is clicked
+- Click Create flag
+
+## test-flag - Multivariate Flag
+- Create an Experiment Flag and name it test-flag
+- Hit next and make sure String is selected in the Flag variations options
+- For the first variation use the following: Value: Welcome!
+- For the second variation use the following: Value: Welcome to my demo site!
+- For the third variation use the following: Value: Welcome to the demo Test User 1!
+
+Under Default Variations
+- Set On to Treatment 1
+- Set Off to Treatment 2
+
+Under Advanced Configuration  make sure SDKs using Client-side ID is clicked
+- Click Create flag
+
+### Note: 
+In order to test Treatment 3 in the multivariate flage you will need to create a new Segment. Once the segment is created, add a user called test-user-1 as an Included Target and save changes.
+
+
 # LaunchDarkly Client-side SDK for React
 
 [![Circle CI](https://circleci.com/gh/launchdarkly/react-client-sdk/tree/main.svg?style=svg)](https://circleci.com/gh/launchdarkly/react-client-sdk/tree/main)
